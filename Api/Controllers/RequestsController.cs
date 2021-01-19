@@ -7,21 +7,21 @@ namespace LibraryManagement.Controllers
 {
     [ApiController]
     [Route("api/requests")]
-    public class RequestController : ControllerBase
+    public class RequestsController : ControllerBase
     {
-        public RequestController()
+        public RequestsController()
         {
         }
 
         [Route("all")]
-        public List<string> GetRequests(int id)
+        public List<string> GetRequests()
         {
             // all requests
             return new List<string>();
         }
 
         [Route("add")]
-        public bool PostRequestBook(dynamic request)
+        public bool PostRequest(dynamic request)
         {
 
             //add the request or renewal
@@ -37,7 +37,7 @@ namespace LibraryManagement.Controllers
         }
 
         [Route("{id}/update")]
-        public bool PutRequestBook(int id, dynamic request)
+        public bool PutRequest(int id, dynamic request)
         {
             //update the request or renewal
             return true;
