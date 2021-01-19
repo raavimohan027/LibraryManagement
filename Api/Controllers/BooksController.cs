@@ -56,7 +56,7 @@ namespace LibraryManagement.Controllers
         }
 
         [Route("{id}/update")]
-        public bool PostBook(int id, Book book)
+        public bool PutBook(int id, Book book)
         {
             var index = Books.FindIndex(book => book.Id == id);
             if (index != -1)
