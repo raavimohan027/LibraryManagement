@@ -28,8 +28,8 @@ namespace LibraryManagement.Controllers
             return true;
         }
 
-        [Route("requestrenewal")]
-        public bool PostRenewalRequest(dynamic request)
+        [Route("{id}/requestrenewal")]
+        public bool PostRenewalRequest(int id, dynamic request)
         {
 
             //add the request or renewal
