@@ -1,0 +1,5 @@
+C:\Users\mohan.r\source\repos\LibraryManagement\obj\Debug\netcoreapp3.1\LibraryManagement.csprojAssemblyReference.cache
+C:\Users\mohan.r\source\repos\LibraryManagement\obj\Debug\netcoreapp3.1\LibraryManagement.AssemblyInfoInputs.cache
+C:\Users\mohan.r\source\repos\LibraryManagement\obj\Debug\netcoreapp3.1\LibraryManagement.AssemblyInfo.cs
+C:\Users\mohan.r\source\repos\LibraryManagement\obj\Debug\netcoreapp3.1\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\mohan.r\source\repos\LibraryManagement\obj\Debug\netcoreapp3.1\LibraryManagement.MvcApplicationPartsAssemblyInfo.cache
