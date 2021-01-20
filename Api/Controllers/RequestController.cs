@@ -6,10 +6,10 @@ using System.Linq;
 namespace LibraryManagement.Controllers
 {
     [ApiController]
-    [Route("api/requests")]
-    public class RequestsController : ControllerBase
+    [Route("api/request")]
+    public class RequestController : ControllerBase
     {
-        public RequestsController()
+        public RequestController()
         {
         }
 
@@ -20,7 +20,6 @@ namespace LibraryManagement.Controllers
             return new List<string>();
         }
 
-        [Route("add")]
         public bool PostRequest(dynamic request)
         {
 
@@ -36,7 +35,7 @@ namespace LibraryManagement.Controllers
             return true;
         }
 
-        [Route("{id}/update")]
+        [Route("{id}")]
         public bool PutRequest(int id, dynamic request)
         {
             //update the request or renewal
@@ -55,7 +54,7 @@ namespace LibraryManagement.Controllers
             // reject the request made by the member
         }
 
-        [Route("{id}/cancel")]
+        [Route("{id}")]
         public bool DeleteRequest(int id)
         {
             //cancel or delete the request
