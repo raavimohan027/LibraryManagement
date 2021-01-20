@@ -5,8 +5,8 @@ using System.Linq;
 namespace LibraryManagement.Controllers
 {
     [ApiController]
-    [Route("api/books")]
-    public class BooksController : ControllerBase
+    [Route("api/book")]
+    public class BookController : ControllerBase
     {
         private static List<Book> Books = new List<Book>()
         {
@@ -20,7 +20,7 @@ namespace LibraryManagement.Controllers
             },
         };
 
-        public BooksController()
+        public BookController()
         {
         }
 
@@ -36,8 +36,8 @@ namespace LibraryManagement.Controllers
             return Books.Where(book => book.Status == "Available");
         }
 
-        [Route("{id}/details")]
-        public Book GetBookDetails(int id)
+        [Route("{id}")]
+        public Book GetBook(int id)
         {
             return Books.FirstOrDefault(book => book.Id == id);
         }
@@ -48,14 +48,13 @@ namespace LibraryManagement.Controllers
             return Books.FirstOrDefault(book => book.Id == id)?.Reviews;
         }
 
-        [Route("add")]
-        public List<Book> PostBook(Book book)
+        public int PostBook(Book book)
         {
             Books.Append(book);
-            return Books;
+            return 0;
         }
 
-        [Route("{id}/update")]
+        [Route("{id}")]
         public bool PutBook(int id, Book book)
         {
             var index = Books.FindIndex(book => book.Id == id);
@@ -68,7 +67,7 @@ namespace LibraryManagement.Controllers
             return false;
         }
 
-        [Route("{id}/addreview")]
+        [Route("{id}/review")]
         public bool PostReview(int id, string review)
         {
             var index = Books.FindIndex(book => book.Id == id);
@@ -81,7 +80,7 @@ namespace LibraryManagement.Controllers
             return false;
         }
 
-        [Route("{id}/remove")]
+        [Route("{id}")]
         public bool DeleteBook(int id)
         {
             var book = Books.FirstOrDefault(book => book.Id == id);
