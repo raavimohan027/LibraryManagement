@@ -13,7 +13,6 @@ namespace LibraryManagement.Controllers
         {
         }
 
-        [Route("details")]
         public dynamic GetMemberDetails(int id)
         {
             // return the member details
@@ -34,7 +33,7 @@ namespace LibraryManagement.Controllers
             return new List<string>();
         }
 
-        [Route("calculatefine")]
+        [Route("fine")]
         public int GetCalculatedFine(int id)
         {
             return 10;
